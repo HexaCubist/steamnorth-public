@@ -1,0 +1,106 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<link rel="stylesheet" href="../Styles/stylesheet.css">
+	<script type="text/javascript" src="../Scripts/script.js"></script>
+	<title>Steam North - Venue</title>
+
+	<style>
+		.mapouter {
+			overflow: hidden;
+			width: 85%;
+			height: 640px;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 30px;
+		}
+		.gmap_canvas {
+			background: none!important;
+			height: 100%;
+			width: 100%;
+		}
+		@media screen and (max-width:990px) {
+			#picture {
+				width: 100%;
+				padding: 0px;
+			}
+			.mapouter {
+				width: 100%;
+			}
+		}
+	</style>
+</head>	
+
+<body onresize="scroll()" onscroll="scroll()">
+	<img src="../Images/bannerVenue.jpg" id="banner"></img>
+
+	<nav>
+		<ul id="nav" class="notscrolled">
+			<div onclick="hide()" id="btnExpand">&#9776;</div>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="trains.html">Trains</a></li>
+			<li><a href="history.html">History</a></li>
+			<li id="selected"><a href="venue.html">Venue</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
+	<article>
+		<h3>Our Venue</h3>
+		
+		<p>
+			Heritage Park is available as a venue for birthdays, weddings, or any other hire occasions and is also open on the third Sunday of every month<br><br>
+			We are located at Kiwi North, 500 State Highway 14, Maunu, Whangarei 0179<br>
+		</p>
+		
+		<div>
+			<img src="../Images/picnic.jpg" style="float:left" id="picture">
+			
+			<div style="font-size:18px;position:relative;top:20px">
+				<h4>Operating Costs</h4>
+				<div style="position:relative;left:20px;">
+					<p>Normal Rides: $2.50</p>
+					<p><b>Free</b> for under 2 year olds</p>
+					<b style="font-size: 20px">Birthdays & other hire occasions</b>
+					<p>Diesel: $100 + $1 per head</p>
+					<p>Steam: $300 + $1 per head</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mapouter">
+			<div class="gmap_canvas">
+				<iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Kiwi%20North%3A%20Museum%2C%20Kiwi%20House%20and%20Heritage%20Park%2C%20500%20State%20Highway%2014%2C%20Maunu%2C%20Whangarei%2C%200179%2C%20New%20Zealand&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+			</div>
+		</div>
+		
+	</article>
+
+
+	<footer>
+	    <ul>
+	      <li>Ray&nbsp;Palmer</li>
+	      <li>&#x1F4DE;&nbsp;435&nbsp;1979</li>
+	      <li>&#x2709;&nbsp;dmail@xtra.co.nz</li>
+	    </ul>
+		<br>
+	    <ul>
+	      <li>Ted&nbsp;Greenwood</li>
+	      <li>&#x1F4DE;&nbsp;437&nbsp;6824</li>
+	      <li>&#x2709;&nbsp;tedlozg@paradise.net.nz</li>
+	    </ul>
+		<br>
+	    <ul>
+	      <li>Alan&nbsp;McGunnigle</li>
+	      <li>&#x1F4DE;&nbsp;438&nbsp;2425</li>
+	      <li>&#x2709;&nbsp;amcgunn@gmail.com</li>
+	    </ul>
+	</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<link rel="stylesheet" href="Styles/stylesheet.css">
+	<script type="text/javascript" src="Scripts/script.js"></script>
+	<script type="text/javascript" src="http://youtube.com/player_api"></script>
+	<title>Steam North - Home</title>
+
+	<script>
+		//scrolls to video (140px above the first image) and plays it
+		function scrollToVideo() {
+			var vidHeight = document.getElementsByTagName("img")[0].height - 140;
+			window.scrollBy(0,20); //scroll in 20px increments
+			if (window.scrollY < vidHeight) {
+				setTimeout(scrollToVideo,1000/60); //scroll at 60fps
+			} else {
+				player.playVideo(); //when it gets to the end, play the video
+			}
+		}
+		
+		var player;
+		//create youtube player to allow it to be controlled with javascript
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('ytplayer', {
+				width: 896,
+				height: 504,
+				videoId: 'wjYPmRmqv7U',
+				events: {
+					onReady: initialize
+				},
+				playerVars: {
+					rel: 0, //don't show related videos
+					modestbranding: 1, //removes the 'watch on youtube.com' button
+					showinfo: 0 //hides title and some other options
+				}
+			});
+		}
+		
+		//needs to be there for some reason
+		function initialize(){}
+	</script>
+	
+	<style>
+	#ytplayer {
+		position: relative;
+		padding-bottom: 60px;
+		top:10px;
+	}
+	@media screen and (max-width:995.6px) {
+		#ytplayer { /*when screen gets as small as video, decrease its size relative to screen size*/
+			height:	50vW;
+			width: 90%;
+		}
+	}
+	#picture {
+		width: 60%;
+		float: left;
+		padding-right: 30px;
+		padding-bottom: 30px;
+	}
+	@media screen and (max-width:1200px) {
+		#picture {
+			width: 100%;
+		}
+	}
+	</style>
+</head>
+
+<body onresize="scroll()" onscroll="scroll()">
+	<nav>
+		<ul id="nav" class="notscrolled">
+			<div onclick="hide()" id="btnExpand">&#9776;</div>
+			<li id="selected"><a href="index.html">Home</a></li>
+			<li><a href="Pages/trains.html">Trains</a></li>
+			<li><a href="Pages/history.html">History</a></li>
+			<li><a href="Pages/venue.html">Venue</a></li>
+			<li><a href="Pages/contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
+	<div style="position:relative; top:0px; left:0px; padding:0; margin:0; background:#f4fafc">
+		<img src="Images/bannerHome.jpg" style="width:100%;position:relative"></img>
+		<div class="triangle" style="border-bottom:6vW solid #f4fafc;bottom:6vW;"></div>
+		<div style="position:absolute;top:18%;padding-left:40px">
+			<h1>HERITAGE PARK<br>RAILWAY</h1>
+			<h2 style="position:relative;top:-10px">A HERITAGE RAILWAY LOCATED<br>IN WHANGAREI, NORTHLAND</h2>
+			<button id="cta" onclick="scrollToVideo()">WATCH THE VIDEO</button>
+		</div>
+	</div>
+	
+	<div style="width:100%;background:#f4fafc">
+		<center><div id="ytplayer"></div></center>
+		<div class="triangle" style="bottom:0px"></div>
+	</div>
+	
+	<article>
+		<h4>About the railway</h4>
+		<p>
+			The railway’s main line is about 0.9km long. It extends from Millington Bush at the end of the line to Museum station at the top of the line. It has an intermediate station at Milnes. The main station is at the Hikurangi station. There is a fairly large loco shed and workshop near to the station.<br><br>
+			An extension about 0.8km long has been laid from a new platform at Millington Bush through the lower bush to a terminus next to Maunu Road in the parking paddock. This section will eventually be operated by the tram but other trains will be able to use the line.<br><br>
+			All members are voluntary and give a lot of their time to operate and maintain the railway. About 5000 hours of voluntary labour per year goes into the operation and maintenance of the railway.
+		</p>
+
+		<p>
+			The railway has been operated throughout its existence by volunteers. At present (2014) we have an excellent bunch of volunteers who are ensuring the safe operation of the railway and also the extension to Barge Park.<br><br>
+			The railway pays its way by charging for rides. Most of the capital works which have been undertaken have only been possible because of grants from organisations such as ASB Trust, Lotteries Commission and Pub Charities.
+		</p>
+
+		<p>
+			The railway is operated by The Whangarei Steam & Model Railway Club Inc. The club became an incorporated society in about 1978 thanks to the guiding hand of its first president Vic Seymour after whom our Peckett steam locomotive is named.<br><br>
+		</p>
+
+		<img src="Images/card.jpg" id="picture">
+		
+		<h4>Locomotives on site</h4>
+
+		<table id="tblTrains">
+			<tr>
+				<td>Peckett 0-4-2T</td>
+				<td>works #1664</td>
+				<td>stored</td>
+			</tr>
+			<tr>
+				<td>Peckett 0-4-2T</td>
+				<td>works #2157</td>
+				<td>operational</td>
+			</tr>
+			<tr>
+				<td>Drewry 0-6-0 diesel</td>
+				<td></td>
+				<td>operational</td>
+			</tr>
+			<tr>
+				<td>Price	0-6-0 diesel</td>
+				<td>works #1664</td>
+				<td>operational</td>
+			</tr>
+			<tr>
+				<td>Union 0-4-0 diesel</td>
+				<td>works #1664</td>
+				<td>operational</td>
+			</tr>
+			<tr>
+				<td>Bagnall 0-6-0 diesel</td>
+				<td>works #1664</td>
+				<td>operational</td>
+			</tr>
+			<tr>
+				<td colspan="3">3 jiggers</td>
+			</tr>
+			<tr style="background:white;">
+				<td colspan="3" style="padding-top: 15px">Read more about our locomotives and other<br>vehicles <a href="Pages/trains.html">here</a></td>
+			</tr>
+		</table>
+
+	</article>
+
+	<footer>
+	    <ul>
+	      <li>Ray&nbsp;Palmer</li>
+	      <li>&#x1F4DE;&nbsp;435&nbsp;1979</li>
+	      <li>&#x2709;&nbsp;dmail@xtra.co.nz</li>
+	    </ul>
+		<br>
+	    <ul>
+	      <li>Ted&nbsp;Greenwood</li>
+	      <li>&#x1F4DE;&nbsp;437&nbsp;6824</li>
+	      <li>&#x2709;&nbsp;tedlozg@paradise.net.nz</li>
+	    </ul>
+		<br>
+	    <ul>
+	      <li>Alan&nbsp;McGunnigle</li>
+	      <li>&#x1F4DE;&nbsp;438&nbsp;2425</li>
+	      <li>&#x2709;&nbsp;amcgunn@gmail.com</li>
+	    </ul>
+	</footer>
+</body>
+
+</html>

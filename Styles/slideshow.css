@@ -1,0 +1,70 @@
+.image {
+	height: 650px;
+	width: 1000px;
+	position: absolute;
+	background: black;
+	left: -1000; /*all images start out of the way*/
+}
+.portrait { /*allows for portrait images to also be used (as i was originally going to)*/
+	position: relative;
+	height: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.landscape {
+	position: relative;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.arrow {
+	height: 100px;
+	z-index: 3; /*in front of gallery*/
+	position: absolute;
+	top: 50%; /*centre arrows vertically*/
+	transform: translateY(-50%);
+}
+#left { /*make arrow point left (using right arrow image)*/
+	left: 25px;
+	transform: rotate(180deg) translateY(50%);
+	opacity: 0; /*hidden when not hovered*/
+	transition: 0.3s; /*for smooth opacity change*/
+}
+#right {
+	right: 25px;
+	opacity: 0;
+	transition: 0.3s;
+}
+#gallery {
+	overflow: hidden;
+	width: 1000px;
+	height: 650px;
+	left: 50%;
+	transform: translateX(-50%); /*centre gallery*/
+	position: relative;
+	background: black;
+}
+#gallery:hover > .arrow {
+	opacity: 0.8; /*when gallery hovered, arrows become 80% opaque*/
+}
+.description {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1000px;
+	padding-top: 10px;
+	border-bottom: solid gray 1px;
+	font-family: "Poppins";
+}
+@media screen and (max-width:1111px) { /*scale down when page gets too small*/
+	.description {
+		width: 100%;
+	}
+	#gallery {
+		width: 100%;
+	}
+	.image {
+		width: 100%;
+		height: 100%;
+	}
+}

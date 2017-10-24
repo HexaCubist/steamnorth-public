@@ -1,0 +1,220 @@
+body {
+	margin: 0;
+	overflow-y: scroll;
+	overflow-x: hidden; /*so that page doesn't have a horisontal scrollbar*/
+}
+h1 { /*styling for title on homepage*/
+	color: white;
+	font-size: 4.17vW;
+	font-family: "Baskerville Old Face";
+	font-weight: 500; /*makes font more bold*/
+}
+h2 { /*styling for subtitle on homepage*/
+	color: white;
+	font-family: Arial;
+	font-size: 1.9vW; /*font scales with width of page*/
+	font-style: italic;
+}
+h3 { /*page headings*/
+	font-family: 'Raleway';
+	font-size: 65px;
+	margin-bottom: 0px;
+}
+h4 { /*page subheadings*/
+	font-family: 'Raleway';
+	font-size: 35px;
+	margin: 25px 0px 10px 0px; /*better way of changing line height*/
+}
+p { /*normal text*/
+	font-family: 'Poppins', sans-serif;
+}
+#cta { /*call-to-action button*/
+	border-radius: 8px;
+	font-family: Arial;
+	font-size: 1.1vW;
+	color: white;
+	background: #f52e2a;
+	padding: 2.5% 4% 2.5% 4%;
+	position: relative;
+	left: 20;
+	outline: none; /*gets rid of blue outline when you click on it*/
+	cursor: pointer; /*changes cursor so it looks like something that can be clicked*/
+	border: none;
+	font-weight: 500;
+	border-bottom: solid 5px #942422;
+	border-right: solid 3px #942422;
+}
+#cta:hover {
+	background: #ff3f3c; /*if browser doesn't support gradients*/
+	background: linear-gradient(#f52e2a, #ff3f3c, #f52e2a);
+}
+#cta:active { /*make the button look indented when pressed*/
+	border: none;
+	top: 5px;
+	left: 23px;
+}
+.triangle { /*for angled parts on the homepage*/
+	border-bottom: 6vW solid white;
+	border-left: 100vW solid transparent;
+	position: relative;
+	bottom: 89px;
+}
+#nav {
+	left: 0;
+	z-index: 1; /*ensures nav is in front of the other elements*/
+	width: calc(100% - 40px);
+	transition: background 0.7s ease, box-shadow 0.7s ease; /*animation*/
+	padding: 10 0 10 40;
+	margin: 0;
+	font-size: 26px;
+	font-family: "Calibri";
+	font-weight: 340;
+}
+.scrolled { /*how the nav looks when you've scrolled down past it*/
+	background: white;
+	box-shadow: -10px 0px 15px 0px rgba(100,100,100,1);
+	border-bottom: solid 1px rgb(170,170,170);
+}
+.notscrolled { /*how the nav looks when it's at the top*/
+	background: rgba(0,0,0,0);
+	box-shadow: none;
+	border-bottom: none;
+}
+#selected a{
+	color:#f52e2a; /*current page link is red*/
+}
+nav li:not(#selected) a {
+    color: #666666; /*non-current page links are grey*/
+}
+nav li {
+	width: 120px;
+	list-style-type: none; /*remove bullet points*/
+	text-align: left; /*make gap on right by moving text left*/
+	float: left; /*list items are along right hand side of nav bar*/
+	padding-left: 0px;
+}
+nav a {
+	text-decoration:none; /*remove underline*/
+	display: inline-block;
+	position: relative;
+	border-bottom: solid; /*give it a different underline*/
+	width: 0px; /*no width means underline doesnt show*/
+	transition: 0.5s ease;
+}
+nav a:hover {
+	width: 80%; /*underline appears on hover*/
+	transition: 0.5s ease; /*happens as an animation*/
+}
+#btnExpand { /*button to toggle expanded nav*/
+	padding: 0;
+	color: #666;
+	margin: 0;
+	float: left;
+	user-select: none; /*you can't accidentally highlight it*/
+	width: 60px;
+}
+#btnExpand:hover { /*makes it look like something you can click on*/
+	cursor: pointer;
+}
+@media screen and (max-width:720px) { /*when nav bar gets too small*/
+	nav li {
+		float: none; /*elements are floated, but not to a particular side*/
+		padding-left: 60px;
+	}
+
+	.hidden { 
+		display: none;
+	}
+
+	#btnExpand { /*show 'expand' button when nav is small*/
+		display: block;
+	}
+}
+@media screen and (min-width:721px) {
+	#btnExpand { /*hide 'expand' button when nav is big*/
+		display: none;
+	}
+
+	.hidden {
+		display: block;
+	}
+}
+#banner { /*position banner at top of pages*/
+	width: 100%;
+	left: 0px;
+	position: relative;
+	top: 0px;
+}
+article { /*set content of the page to fixed width and give text a font*/
+	width: 1170px;
+	top: 35px;
+	left: 50%;
+	transform: translateX(-50%); /*centre it*/
+	position: relative;
+	font-family: 'Poppins', sans-serif;
+}
+footer {
+	width: calc(100% - 80px); /*80 pixels less than full width*/
+	left: 50%;
+	transform: translateX(-50%);
+	border-top: solid gray 1px;
+	bottom: 0px;
+	height: 140px;
+	position: relative;
+	margin-top: 60px;
+	float: none; /*stops floating elements from pushing it out of the way*/
+	font-family: 'Poppins', sans-serif;
+	text-align: center; /*centre text within footer*/
+}
+footer ul {
+	position: relative;
+	top: 20px;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+footer li {
+	padding: 0px 10px 5px 10px;
+	list-style-type: none;
+	float: left; /*each of the three li elements can go the same line*/
+}
+@media screen and (max-width:1300px) { /*start decreasing page size when window is 1300px*/
+	article {
+		width: 90%;
+	}
+	#gallery {
+		width: 100%;
+	}
+	.image {
+		width: 100%;
+		height: 100%;
+	}
+}
+.picture { /*styling for images*/
+	width: 60%;
+	padding-right: 20px;
+}
+@media screen and (max-width:900px) {
+	.picture {
+		width: 100%; /*images become as wide as page when too small*/
+	}
+}
+@media screen and (max-width:595px) {
+	footer li {
+		float: none; /*li elements go on their own line, but are still considered 'floating'*/
+	}
+	footer ul {
+		padding-bottom:20px;
+	}
+}
+#tblTrains {
+	border-collapse: collapse; /*stops there being gaps between each cell in the table*/
+	margin-bottom: 25px;
+}
+#tblTrains td {
+	padding: 6px;
+}
+#tblTrains tr:nth-child(2n+2) { /*table has alternating rows of white and grey*/
+	background: #EEEEEE;
+	border: 0px;
+}
