@@ -1,7 +1,8 @@
 var width = 1000;
 var cur = moving = 0;
 var images, text;
-window.onload = function () {
+
+function start() {
 	images = document.getElementsByClassName("image");
 	text = document.getElementsByClassName("description");
 	position();

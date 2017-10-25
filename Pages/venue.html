@@ -23,8 +23,12 @@
 			height: 100%;
 			width: 100%;
 		}
+		#picnicImg {
+			width: 60%;
+			padding: 20px;
+		}
 		@media screen and (max-width:990px) {
-			#picture {
+			#picnicImg {
 				width: 100%;
 				padding: 0px;
 			}
@@ -35,12 +39,12 @@
 	</style>
 </head>	
 
-<body onresize="scroll()" onscroll="scroll()">
+<body onload="setup()" onresize="scroll()" onscroll="scroll()">
 	<img src="../Images/bannerVenue.jpg" id="banner"></img>
 
 	<nav>
-		<ul id="nav" class="notscrolled">
-			<div onclick="hide()" id="btnExpand">&#9776;</div>
+		<div onclick="toggle()" id="btnExpand">&#9776;</div>
+		<ul id="navInner" class="notscrolled">
 			<li><a href="../index.html">Home</a></li>
 			<li><a href="trains.html">Trains</a></li>
 			<li><a href="history.html">History</a></li>
@@ -58,7 +62,7 @@
 		</p>
 		
 		<div>
-			<img src="../Images/picnic.jpg" style="float:left" id="picture">
+			<img src="../Images/picnic.jpg" style="float:left" id="picnicImg">
 			
 			<div style="font-size:18px;position:relative;top:20px">
 				<h4>Operating Costs</h4>

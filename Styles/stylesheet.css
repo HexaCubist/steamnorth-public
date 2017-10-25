@@ -59,16 +59,21 @@ p { /*normal text*/
 	position: relative;
 	bottom: 89px;
 }
-#nav {
+nav {
 	left: 0;
-	z-index: 1; /*ensures nav is in front of the other elements*/
-	width: calc(100% - 40px);
-	transition: background 0.7s ease, box-shadow 0.7s ease; /*animation*/
-	padding: 10 0 10 40;
+	width: 100%;
 	margin: 0;
 	font-size: 26px;
 	font-family: "Calibri";
 	font-weight: 340;
+	height: 50px;
+	z-index: 1; /*ensures nav is in front of the other elements*/
+}
+#navInner {
+	margin: 0px;
+	transition: all 0.7s ease; /*animation*/
+	padding: 10 0 10 40;
+	position: relative;
 }
 .scrolled { /*how the nav looks when you've scrolled down past it*/
 	background: white;
@@ -91,7 +96,6 @@ nav li {
 	list-style-type: none; /*remove bullet points*/
 	text-align: left; /*make gap on right by moving text left*/
 	float: left; /*list items are along right hand side of nav bar*/
-	padding-left: 0px;
 }
 nav a {
 	text-decoration:none; /*remove underline*/
@@ -106,12 +110,14 @@ nav a:hover {
 	transition: 0.5s ease; /*happens as an animation*/
 }
 #btnExpand { /*button to toggle expanded nav*/
-	padding: 0;
 	color: #666;
-	margin: 0;
-	float: left;
 	user-select: none; /*you can't accidentally highlight it*/
-	width: 60px;
+	width: 30px;
+	position: absolute;
+	font-size: 22px;
+	z-index: 3;
+	left: 25px;
+	top: 10px;	
 }
 #btnExpand:hover { /*makes it look like something you can click on*/
 	cursor: pointer;
@@ -119,24 +125,27 @@ nav a:hover {
 @media screen and (max-width:720px) { /*when nav bar gets too small*/
 	nav li {
 		float: none; /*elements are floated, but not to a particular side*/
-		padding-left: 60px;
+		padding-left: 35px;
 	}
-
 	.hidden { 
 		display: none;
 	}
-
 	#btnExpand { /*show 'expand' button when nav is small*/
 		display: block;
+	}
+	#navInner {
+		height: auto;
 	}
 }
 @media screen and (min-width:721px) {
 	#btnExpand { /*hide 'expand' button when nav is big*/
 		display: none;
 	}
-
 	.hidden {
 		display: block;
+	}
+	#navInner {
+		height: 35px;
 	}
 }
 #banner { /*position banner at top of pages*/
@@ -144,6 +153,7 @@ nav a:hover {
 	left: 0px;
 	position: relative;
 	top: 0px;
+	z-index: 5;
 }
 article { /*set content of the page to fixed width and give text a font*/
 	width: 1170px;

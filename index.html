@@ -69,10 +69,10 @@
 	</style>
 </head>
 
-<body onresize="scroll()" onscroll="scroll()">
+<body onload="setup()" onresize="scroll()" onscroll="scroll()">
 	<nav>
-		<ul id="nav" class="notscrolled">
-			<div onclick="hide()" id="btnExpand">&#9776;</div>
+		<div onclick="toggle()" id="btnExpand">&#9776;</div>
+		<ul id="navInner" class="notscrolled">
 			<li id="selected"><a href="index.html">Home</a></li>
 			<li><a href="Pages/trains.html">Trains</a></li>
 			<li><a href="Pages/history.html">History</a></li>
