@@ -42,7 +42,7 @@ function scroll() {
 	}
 	
 	//if screen width is too small, give nav solid background
-	if (window.innerWidth < 720) {
+	if (window.innerWidth < 1000) {
 		hide();
 		navUL.className = "scrolled";
 	} 
