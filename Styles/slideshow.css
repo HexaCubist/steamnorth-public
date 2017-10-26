@@ -5,16 +5,6 @@
 	left: -100%; /*all images start out of the way*/
 	top: 0;
 }
-.portrait { /*allows for portrait images to also be used (as i was originally going to)*/
-	position: relative;
-	height: 100%;
-	left: 50%;
-	transform: translateX(-50%);
-}
-.landscape {
-	position: relative;
-	width: 100%;
-}
 .arrow {
 	height: 100px;
 	z-index: 3; /*in front of gallery*/
@@ -36,21 +26,19 @@
 #gallery {
 	overflow: hidden;
 	width: 100%;
-	
-	 /*centre gallery*/
 	padding-top: 56.25%;
 	position: relative;
-	background: black;
 }
 #gallery:hover > .arrow {
 	opacity: 0.8; /*when gallery hovered, arrows become 80% opaque*/
 }
+#gallery img:not(.arrow) {
+	position: relative;
+	width: 100%;
+}
 .description {
 	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 1000px;
+	width: 100%;
 	padding-top: 10px;
 	border-bottom: solid gray 1px;
-	font-family: "Poppins";
 }
