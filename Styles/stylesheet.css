@@ -34,12 +34,11 @@ p { /*normal text*/
 	border-radius: 8px;
 	font-family: "Calibri";
 	font-weight: 340;
-	font-size: 1.4vW;
+	font-size: 2em;
 	color: white;
 	background: #1d9334;
 	padding: 2.5% 5% 2.5% 5%;
 	position: relative;
-	left: 20;
 	outline: none; /*gets rid of blue outline when you click on it*/
 	cursor: pointer; /*changes cursor so it looks like something that can be clicked*/
 	border: none;
