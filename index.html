@@ -8,12 +8,12 @@
 	<link rel="stylesheet" href="Styles/hero.css">
 	<script type="text/javascript" src="Scripts/script.js"></script>
 	<script type="text/javascript" src="https://youtube.com/player_api"></script>
-	<title>Steam North - Home</title>
+	<title>Steam North Whangarei</title>
 
 	<script>
 		//scrolls to video (140px above the first image) and plays it
 		function scrollToVideo() {
-			var vidHeight = document.getElementsByTagName("img")[0].height - 140;
+			var vidHeight = document.getElementsByClassName("hero")[0].clientHeight - 140;
 			window.scrollBy(0,20); //scroll in 20px increments
 			if (window.scrollY < vidHeight) {
 				setTimeout(scrollToVideo,1000/60); //scroll at 60fps
@@ -48,7 +48,7 @@
 	#ytplayer {
 		position: relative;
 		padding-bottom: 60px;
-		top:10px;
+		top:35px;
 	}
 	@media screen and (max-width:995.6px) {
 		#ytplayer { /*when screen gets as small as video, decrease its size relative to screen size*/
@@ -76,6 +76,7 @@
 		<ul id="navInner" class="notscrolled">
 			<li id="selected"><a href="index.html">Home</a></li>
 			<li><a href="Pages/trains.html">Trains</a></li>
+			<li><a href="Pages/jigger.html">Jigger</a></li>
 			<li><a href="Pages/history.html">History</a></li>
 			<li><a href="Pages/venue.html">Venue</a></li>
 			<li><a href="Pages/album.html">Photos</a></li>

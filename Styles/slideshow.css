@@ -28,6 +28,7 @@
 	width: 100%;
 	padding-top: 56.25%;
 	position: relative;
+	background: black;
 }
 #gallery:hover > .arrow {
 	opacity: 0.8; /*when gallery hovered, arrows become 80% opaque*/
