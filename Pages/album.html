@@ -1,0 +1,130 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+	<link rel="stylesheet" href="../Styles/stylesheet.css">
+	<link rel="stylesheet" href="../Styles/album.css">
+	<script type="text/javascript" src="../Scripts/script.js"></script>
+	<title>Steam North - Venue</title>
+
+	<style>
+		.mapouter {
+			overflow: hidden;
+			width: 85%;
+			height: 640px;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 30px;
+		}
+		.gmap_canvas {
+			background: none!important;
+			height: 100%;
+			width: 100%;
+		}
+		#picnicImg {
+			width: 60%;
+			padding: 20px;
+		}
+		@media screen and (max-width:990px) {
+			#picnicImg {
+				width: 100%;
+				padding: 0px;
+			}
+			.mapouter {
+				width: 100%;
+			}
+		}
+	</style>
+</head>	
+
+<body onload="setup()" onresize="scroll()" onscroll="scroll()">
+	<img src="../Images/bannerVenue.jpg" id="banner"></img>
+
+	<nav>
+		<div onclick="toggle()" id="btnExpand">&#9776;</div>
+		<ul id="navInner" class="notscrolled">
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="trains.html">Trains</a></li>
+			<li><a href="history.html">History</a></li>
+			<li><a href="venue.html">Venue</a></li>
+			<li id="selected"><a href="album.html">Photos</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
+	<article>
+		<div class="album">
+			<a href="../assets/photos/photo-1.jpg">
+				<div class="image-container"><img src="../assets/photos/thumb-1.jpg"></div>
+				<p>Bush Room</p>
+			</a>
+			<a href="../assets/photos/photo-2.jpg">
+				<div class="image-container"><img src="../assets/photos/thumb-2.jpg"></div>
+				<p>Picnic Area</p>
+			</a>
+			<a href="../assets/photos/photo-3.jpg">
+				<div class="image-container"><img src="../assets/photos/thumb-3.jpg"></div>
+				<p>Riponui Pah School</p>
+			</a>
+			<a href="../assets/photos/photo-4.jpg">
+				<div class="image-container"><img src="../assets/photos/thumb-4.jpg"></div>
+				<p>Large Train Station</p>
+			</a>
+			<a href="../assets/photos/photo-5.jpg">
+				<div class="image-container"><img src="../assets/photos/thumb-5.jpg"></div>
+				<p>Seymour</p>
+			</a>
+			<a href="../assets/photos/photo-6.jpg">
+				<div class="image-container"><img src="../assets/photos/thumb-6.jpg"></div>
+				<p>Model Trains</p>
+			</a>
+			<a href="../assets/photos/photo-7.jpg">
+				<div class="image-container"><img src="../assets/photos/thumb-7.jpg"></div>
+				<p>Lever Frame</p>
+			</a>
+			<a href="../assets/photos/photo-8.jpg">
+				<div class="image-container"><img src="../assets/photos/thumb-8.jpg"></div>
+				<p>Train Tracks</p>
+			</a>
+			<a href="../assets/photos/photo-9.jpg">
+				<div class="image-container"><img src="../assets/photos/thumb-9.jpg"></div>
+				<p>Johnny</p>
+			</a>
+			<a href="../assets/photos/photo-10.jpg">
+				<div class="image-container"><img src="../assets/photos/thumb-10.jpg"></div>
+				<p>Model Railway</p>
+			</a>
+			<a href="../assets/photos/photo-11.jpg">
+				<div class="image-container"><img src="../assets/photos/thumb-11.jpg"></div>
+				<p>Millington Bush</p>
+			</a>
+		</div>
+	</article>
+
+
+	<footer>
+	    <ul>
+	      <li>Ray&nbsp;Palmer</li>
+	      <li>&#x1F4DE;&nbsp;435&nbsp;1979</li>
+	      <li>&#x2709;&nbsp;dmail@xtra.co.nz</li>
+	    </ul>
+		<br>
+	    <ul>
+	      <li>Ted&nbsp;Greenwood</li>
+	      <li>&#x1F4DE;&nbsp;437&nbsp;6824</li>
+	      <li>&#x2709;&nbsp;tedlozg@paradise.net.nz</li>
+	    </ul>
+		<br>
+	    <ul>
+	      <li>Alan&nbsp;McGunnigle</li>
+	      <li>&#x1F4DE;&nbsp;438&nbsp;2425</li>
+	      <li>&#x2709;&nbsp;amcgunn@gmail.com</li>
+	    </ul>
+	</footer>
+
+</body>
+
+</html>
