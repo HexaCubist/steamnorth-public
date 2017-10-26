@@ -83,7 +83,7 @@ nav {
 	border-bottom: solid 1px rgb(170,170,170);
 }
 .notscrolled { /*how the nav looks when it's at the top*/
-	background: rgba(0,0,0,0);
+	background: rgb(255, 255, 255);
 	box-shadow: none;
 	border-bottom: none;
 }

@@ -1,0 +1,39 @@
+header {
+	display: block;
+	background-image: linear-gradient(45deg, rgba(29, 147, 52, 0.78) 0%, #051e4580 100%), url(../assets/feature-1-o.jpg);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	padding-bottom: 3vw !important;
+}
+
+header .hero {
+	display: block;
+	max-width: 100%;
+	margin: auto;
+	text-align: center;
+	padding: 200px 0px;
+}
+
+header .background {
+	background-image: url('../assets/feature-1-o.jpg');
+	width: 100%;
+	height: 600px;
+}
+
+header .hero h1 {
+	color: white;
+	font-size: 4em;
+}
+
+header .hero h3 {
+	color: white;
+	font-size: 2em;
+	font-style: italic;
+	margin: 1em;
+}
+
+header .triangle {
+	position: absolute;
+	bottom: 0px;
+}
