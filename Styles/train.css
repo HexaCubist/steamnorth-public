@@ -1,0 +1,16 @@
+.blur{filter:blur(1vw);transform:rotate(0.75turn) scaleX(0.125);position:fixed;width:100%;top:10vw;z-index:1000;visibility:hidden;}
+body{max-width:100%;overflow-x:hidden;}
+.train{z-index:1000;position:relative;bottom:150vw;width:100vw;transform:scaleX(8) rotate(1.25turn);animation-duration:1s;animation-timing-function:linear;}
+@keyframes Woosh{0%{transform:scaleX(8) rotate(1.24turn)
+bottom:150vw;}
+10%{transform:scaleX(8) rotate(1.26turn);bottom:120vw;}
+20%{transform:scaleX(8) rotate(1.24turn);bottom:90vw;}
+30%{transform:scaleX(8) rotate(1.26turn);bottom:60vw;}
+40%{transform:scaleX(8) rotate(1.24turn);bottom:30vw;}
+50%{transform:scaleX(8) rotate(1.26turn);bottom:0vw;}
+60%{transform:scaleX(8) rotate(1.24turn);bottom:-30vw;}
+70%{transform:scaleX(8) rotate(1.26turn);bottom:-60vw;}
+80%{transform:scaleX(8) rotate(1.24turn);bottom:-90vw;}
+90%{transform:scaleX(8) rotate(1.26turn);bottom:-120vw;}
+100%{transform:scaleX(8) rotate(1.24turn);bottom:-150vw;}
+}
