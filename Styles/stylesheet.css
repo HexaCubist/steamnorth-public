@@ -5,13 +5,15 @@ body {
 }
 h1 { /*styling for title on homepage*/
 	color: white;
-	font-size: 4.17vW;
-	font-family: "Baskerville Old Face";
-	font-weight: 500; /*makes font more bold*/
+	font-size: 4.5vW;
+	font-family: 'Raleway';
+	font-weight: 400; /*makes font more bold*/
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 h2 { /*styling for subtitle on homepage*/
 	color: white;
-	font-family: Arial;
+	font-family: "Raleway";
 	font-size: 1.9vW; /*font scales with width of page*/
 	font-style: italic;
 }
@@ -22,7 +24,7 @@ h3 { /*page headings*/
 }
 h4 { /*page subheadings*/
 	font-family: 'Raleway';
-	font-size: 35px;
+	font-size: 2em;
 	margin: 25px 0px 10px 0px; /*better way of changing line height*/
 }
 p { /*normal text*/
@@ -30,23 +32,23 @@ p { /*normal text*/
 }
 #cta { /*call-to-action button*/
 	border-radius: 8px;
-	font-family: Arial;
-	font-size: 1.1vW;
+	font-family: "Calibri";
+	font-weight: 340;
+	font-size: 1.4vW;
 	color: white;
-	background: #f52e2a;
-	padding: 2.5% 4% 2.5% 4%;
+	background: #1d9334;
+	padding: 2.5% 5% 2.5% 5%;
 	position: relative;
 	left: 20;
 	outline: none; /*gets rid of blue outline when you click on it*/
 	cursor: pointer; /*changes cursor so it looks like something that can be clicked*/
 	border: none;
-	font-weight: 500;
-	border-bottom: solid 5px #942422;
-	border-right: solid 3px #942422;
+	border-bottom: solid 5px #006714;
+	border-right: solid 3px #006714;
 }
 #cta:hover {
-	background: #ff3f3c; /*if browser doesn't support gradients*/
-	background: linear-gradient(#f52e2a, #ff3f3c, #f52e2a);
+	background: #2eb147; /*if browser doesn't support gradients*/
+	background: linear-gradient(#1d9334, #2eb147, #1d9334);
 }
 #cta:active { /*make the button look indented when pressed*/
 	border: none;
@@ -86,7 +88,7 @@ nav {
 	border-bottom: none;
 }
 #selected a{
-	color:#f52e2a; /*current page link is red*/
+	color:#1d9334; /*current page link is red*/
 }
 nav li:not(#selected) a {
     color: #666666; /*non-current page links are grey*/
