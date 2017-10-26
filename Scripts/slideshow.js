@@ -20,8 +20,8 @@ function position() {
 	text[cur].style.display = "block";
 	images[cur].style.left = 0;
 	//position adjacent images on either side
-	images[loop(cur-1)].style.left = width;
-	images[loop(cur+1)].style.left = -width;
+	images[loop(cur-1)].style.left = "100%";
+	images[loop(cur+1)].style.left = "-100%";
 }
 
 //actually move the image into view
@@ -35,7 +35,12 @@ function move(dir) {
 		//move new image into view
 		images[loop(cur+dir)].style.left = 0;
 		//move old image out the way
-		images[cur].style.left = dir*width;
+		console.log(dir);
+		if (dir == 1) {
+			images[cur].style.left = "100%";
+		} else {
+			images[cur].style.left = "-100%";
+		}
 		
 		//after 800ms, update current image, reposition other images and allow for process to repeat
 		setTimeout(
@@ -60,13 +65,13 @@ function loop(d) {
 	}
 }
 
-//triggered onresize; resets the position of images
-function pageSize() {
-	if (window.innerWidth < 1111) {
-		width = window.innerWidth;
-		document.getElementById("gallery").style.height = window.innerWidth * 0.9 * 0.65;
-	} else {
-		width = 1000;
-	}
-	position();
-}
+// //triggered onresize; resets the position of images
+// function pageSize() {
+// 	if (window.innerWidth < 1111) {
+// 		width = window.innerWidth;
+// 		document.getElementById("gallery").style.height = window.innerWidth * 0.9 * 0.65;
+// 	} else {
+// 		width = 1000;
+// 	}
+// 	position();
+// }

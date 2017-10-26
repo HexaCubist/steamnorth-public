@@ -1,9 +1,9 @@
 .image {
-	height: 650px;
-	width: 1000px;
+	width: 100%;
 	position: absolute;
 	background: black;
-	left: -1000; /*all images start out of the way*/
+	left: -100%; /*all images start out of the way*/
+	top: 0;
 }
 .portrait { /*allows for portrait images to also be used (as i was originally going to)*/
 	position: relative;
@@ -14,8 +14,6 @@
 .landscape {
 	position: relative;
 	width: 100%;
-	top: 50%;
-	transform: translateY(-50%);
 }
 .arrow {
 	height: 100px;
@@ -37,10 +35,10 @@
 }
 #gallery {
 	overflow: hidden;
-	width: 1000px;
-	height: 650px;
-	left: 50%;
-	transform: translateX(-50%); /*centre gallery*/
+	width: 100%;
+	
+	 /*centre gallery*/
+	padding-top: 56.25%;
 	position: relative;
 	background: black;
 }
@@ -55,16 +53,4 @@
 	padding-top: 10px;
 	border-bottom: solid gray 1px;
 	font-family: "Poppins";
-}
-@media screen and (max-width:1111px) { /*scale down when page gets too small*/
-	.description {
-		width: 100%;
-	}
-	#gallery {
-		width: 100%;
-	}
-	.image {
-		width: 100%;
-		height: 100%;
-	}
 }
