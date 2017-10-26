@@ -13,7 +13,7 @@
 	<script>
 		//scrolls to video (140px above the first image) and plays it
 		function scrollToVideo() {
-			var vidHeight = document.getElementsByTagName("img")[0].height - 140;
+			var vidHeight = document.getElementsByClassName("hero")[0].clientHeight - 140;
 			window.scrollBy(0,20); //scroll in 20px increments
 			if (window.scrollY < vidHeight) {
 				setTimeout(scrollToVideo,1000/60); //scroll at 60fps
