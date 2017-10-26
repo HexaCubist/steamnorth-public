@@ -44,6 +44,7 @@ p { /*normal text*/
 	border-bottom: solid 3px #006714;
 	border-right: solid 3px #006714;
 	transition: all ease 0.25s;
+	position: relative;
 }
 #cta:hover {
 	background: #06791c; /*if browser doesn't support gradients*/
@@ -63,7 +64,7 @@ nav {
 	font-family: "Calibri";
 	font-weight: 340;
 	height: 50px;
-	z-index: 1; /*ensures nav is in front of the other elements*/
+	z-index: 20; /*ensures nav is in front of the other elements*/
 }
 #navInner {
 	margin: 0px;

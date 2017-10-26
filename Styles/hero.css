@@ -1,6 +1,5 @@
 header {
 	display: block;
-	background-image: linear-gradient(45deg, rgba(29, 147, 52, 0.78) 0%, #051e4580 100%), url(../assets/feature-1-o.jpg);
 	background-size: cover;
 	background-position: center;
 	display: flex;
@@ -16,14 +15,32 @@ header .hero {
 }
 
 header .background {
-	background-image: url('../assets/feature-1-o.jpg');
+	background-image: url(../assets/feature-1-o.jpg);
+	background-size: cover;
+	background-position: center;
+	width: 120%;
+	height: 100%;
+	position: absolute;
+	animation:slide 60s ease-out infinite;
+	transform: translateX(0vw);
+	top: 0;
+	left: 0;
+}
+header .background-overlay {
+	background-image: linear-gradient(45deg, rgba(29, 147, 52, 0.78) 0%, #051e4580 100%);
+	background-size: cover;
+	background-position: center;
 	width: 100%;
-	height: 600px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 header .logo {
 	width: 600px;
 	max-width: 90%;
+	position: relative;
 }
 
 header .hero h1 {
@@ -36,9 +53,18 @@ header .hero h3 {
 	font-size: 2em;
 	font-style: italic;
 	margin: 1em;
+	position: relative;
 }
 
 header .triangle {
 	position: absolute;
 	bottom: 0px;
+}
+
+
+/* Background Animations */
+@keyframes slide{
+	0%{transform:translateX(0%);}
+	50%{transform:translateX(-20%);}
+	100%{transform:translateX(0%);}
 }
