@@ -6,7 +6,6 @@ function start() {
 	images = document.getElementsByClassName("image");
 	text = document.getElementsByClassName("description");
 	position();
-	pageSize();
 }
 
 //positions images on either side, ready to slide into view
@@ -35,7 +34,6 @@ function move(dir) {
 		//move new image into view
 		images[loop(cur+dir)].style.left = 0;
 		//move old image out the way
-		console.log(dir);
 		if (dir == 1) {
 			images[cur].style.left = "100%";
 		} else {
@@ -64,14 +62,3 @@ function loop(d) {
 		return d;
 	}
 }
-
-// //triggered onresize; resets the position of images
-// function pageSize() {
-// 	if (window.innerWidth < 1111) {
-// 		width = window.innerWidth;
-// 		document.getElementById("gallery").style.height = window.innerWidth * 0.9 * 0.65;
-// 	} else {
-// 		width = 1000;
-// 	}
-// 	position();
-// }
