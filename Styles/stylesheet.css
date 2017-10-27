@@ -151,7 +151,7 @@ nav a:hover {
 	left: 0px;
 	position: relative;
 	top: 0px;
-	z-index: 5;
+	z-index: 10;
 }
 article { /*set content of the page to fixed width and give text a font*/
 	width: 1100px;
