@@ -1,0 +1,26 @@
+.sponsors {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items:center;
+}
+
+.sponsors * {
+	transition: 0.33s ease-in-out
+}
+
+.sponsors .sponsor {
+	justify-content:center;
+	align-items:center;
+	filter: opacity(1);
+	transform: translateY(0px);
+}
+
+.sponsors .sponsor img {
+	width: 256px;
+}
+
+.sponsors .sponsor:hover {
+	filter: opacity(0.8);
+	transform: translateY(5px);
+}
