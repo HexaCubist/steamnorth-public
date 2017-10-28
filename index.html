@@ -54,17 +54,6 @@
 	</script>
 	
 	<style>
-	#ytplayer {
-		position: relative;
-		padding-bottom: 60px;
-		top:35px;
-	}
-	@media screen and (max-width:995.6px) {
-		#ytplayer { /*when screen gets as small as video, decrease its size relative to screen size*/
-			height:	50vW;
-			width: 90%;
-		}
-	}
 	#cardImg {
 		width: 60%;
 		float: right;
@@ -110,7 +99,7 @@
 
 <body onload="setup()" onresize="scroll()" onscroll="scroll()">
 	<nav>
-		<div onclick="toggle()" id="btnExpand">&#9776;</div>
+		<img src="Images/burger.svg" onclick="toggle()" id="btnExpand">
 		<ul id="navInner" class="notscrolled">
 			<li id="selected"><a href="index.html">Home</a></li>
 			<li><a href="Pages/trains.html">Trains</a></li>

@@ -113,10 +113,10 @@ nav a:hover {
 	user-select: none; /*you can't accidentally highlight it*/
 	width: 30px;
 	position: absolute;
-	font-size: 22px;
 	z-index: 3;
 	left: 25px;
-	top: 10px;	
+	top: 18px;
+	height: 18px;
 }
 #btnExpand:hover { /*makes it look like something you can click on*/
 	cursor: pointer;
@@ -222,4 +222,15 @@ footer li {
 #tblTrains tr:nth-child(2n+2) { /*table has alternating rows of white and grey*/
 	background: #EEEEEE;
 	border: 0px;
+}
+#ytplayer {
+	position: relative;
+	padding-bottom: 60px;
+	top:35px;
+}
+@media screen and (max-width:995.6px) {
+	#ytplayer { /*when screen gets as small as video, decrease its size relative to screen size*/
+		height:	50vW;
+		width: 90%;
+	}
 }
