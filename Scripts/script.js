@@ -5,6 +5,8 @@ function setup() {
 	nav = document.getElementsByTagName("nav")[0];
 	navUL = document.getElementById("navInner");
 	
+	nav.style.display = "block";
+	
 	//find all li elements in the nav and put them in an array
 	//(I could've done this more easily by giving them all a class)
 	var li = document.getElementsByTagName("li");
@@ -42,7 +44,7 @@ function scroll() {
 	}
 	
 	//if screen width is too small, give nav solid background
-	if (window.innerWidth < 1) {
+	if (window.innerWidth < 1000) {
 		hide();
 		navUL.className = "scrolled";
 	} 

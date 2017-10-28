@@ -65,6 +65,7 @@ nav {
 	font-family: "Calibri";
 	font-weight: 340;
 	height: 50px;
+	display: none;
 	z-index: 20; /*ensures nav is in front of the other elements*/
 }
 #navInner {
@@ -151,7 +152,7 @@ nav a:hover {
 	left: 0px;
 	position: relative;
 	top: 0px;
-	z-index: 10;
+	z-index: 21;
 }
 article { /*set content of the page to fixed width and give text a font*/
 	width: 1100px;
