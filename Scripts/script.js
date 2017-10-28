@@ -53,7 +53,7 @@ function scroll() {
 function toggle() {
 	//hide all links, except the current page
 	if (expanded) {
-		navUL.style.top = "-210px";
+		navUL.style.top = "-230px";
 		setTimeout(
 			function() {
 				navUL.style.transition = "all 0s";
@@ -66,7 +66,7 @@ function toggle() {
 	//if already hidden, show all links
 	else {
 		navUL.style.transition = "all 0s ease";
-		navUL.style.top = "-180px";
+		navUL.style.top = "-210px";
 		setTimeout(function(){
 			navUL.style.transition = "all 0.7s ease";
 			navUL.style.top = "0px";
