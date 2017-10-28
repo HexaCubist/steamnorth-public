@@ -76,7 +76,35 @@
 			width: 100%;
 		}
 	}
+	.mapouter {
+		overflow: hidden;
+		width: 85%;
+		height: 640px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 30px;
+	}
+	.gmap_canvas {
+		background: none!important;
+		height: 100%;
+		width: 100%;
+	}
+	#picnicImg {
+		width: 60%;
+		padding: 20px;
+	}
+	@media screen and (max-width:990px) {
+		#picnicImg {
+			width: 100%;
+			padding: 0px;
+		}
+		.mapouter {
+			width: 100%;
+		}
+	}
 	</style>
+
 </head>
 
 <body onload="setup()" onresize="scroll()" onscroll="scroll()">
@@ -110,7 +138,33 @@
 		<div class="triangle" style="bottom:0px"></div>
 	</div>
 	
-	<article>
+		<article>
+		<p style="text-align:center">
+			<b style="font-size:20px">Open on the third Sunday of every month</b><br><br>
+			Heritage Park is also available as a venue for birthdays, weddings, or any other hire occasions
+		</p>
+		
+		<div>
+			<img src="Images/picnic.jpg" style="float:left" id="picnicImg">
+			
+			<div style="font-size:18px;position:relative;top:20px;">
+				<h4>Operating Costs</h4>
+				<div style="position:relative;left:20px;">
+					<p>Normal Rides: $2.50</p>
+					<p><b>Free</b> for under 2 year olds</p>
+					<b style="font-size: 20px">Birthdays & other hire occasions</b>
+					<p>Diesel: $100 + $1 per head</p>
+					<p>Steam: $300 + $1 per head</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="mapouter">
+			<div class="gmap_canvas">
+				<iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Kiwi%20North%3A%20Museum%2C%20Kiwi%20House%20and%20Heritage%20Park%2C%20500%20State%20Highway%2014%2C%20Maunu%2C%20Whangarei%2C%200179%2C%20New%20Zealand&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+			</div>
+		</div>
+		
 		<h4>About the railway</h4>
 		<p>
 			The railway’s main line is about 0.9km long. It extends from Millington Bush at the end of the line to Museum station at the top of the line. It has an intermediate station at Milnes. The main station is at the Hikurangi station. There is a fairly large loco shed and workshop near to the station.<br><br>
